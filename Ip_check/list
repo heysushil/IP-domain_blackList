@@ -1,0 +1,49 @@
+https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a54.240.8.34&run=toolpage#
+
+ ini_set('max_execution_time', 300);
+
+====================================
+
+
+
+35.155.142.191 ( 1 True)  //1 is Right & 0  Site is Wrong
+54.213.54.219  (0 False)
+52.41.230.207  (0 False)
+103.79.1.0     (1 True)
+103.79.1.1     (1 True)
+103.79.1.2     (0 
+103.79.1.3 1
+103.79.1.4 0
+103.79.1.5 0
+103.79.1.6 0
+103.79.1.7 0
+103.79.1.8 0
+103.79.1.9 0
+103.79.1.10 1
+103.79.1.11 1
+103.79.1.12 0
+103.79.1.13 0
+103.79.1.14 1
+103.79.1.15 1
+103.79.1.16 0
+103.79.1.17 0 //
+103.79.1.18 1
+103.79.1.19 1
+103.79.1.20 1
+103.79.1.21 1
+fgmail1.com 0
+fgmail2.com 0
+fgmail3.com 0 
+fgmail4.com 0
+fgmail5.com 0
+fgmail6.com 0
+fgmail7.com 0
+mg-mail1.com 0
+mg-mail2.com 0
+mg-mail3.com 0 //
+mg-mail4.com 1
+mg-mail5.com 1
+
+https://www.spamhaus.org/dbl/
+https://www.google.com/search?source=hp&ei=o4srXL-TMZqHyAOsw7XoDw&q=check+if+ip+is+blacklisted+by+domain+name+in+php&btnK=Google+Search&oq=check+if+ip+is+blacklisted+by+domain+name+in+php&gs_l=psy-ab.3...4107.26851..27310...12.0..0.381.5480.0j21j5j3......0....1..gws-wiz.....0..0j35i39j0i131j0i10j0i22i30j33i160j33i22i29i30.aXF4u34FDDA
+https://stackoverflow.com/questions/45873004/php-check-if-users-ip-address-is-blacklisted-and-block-it-from-my-application
