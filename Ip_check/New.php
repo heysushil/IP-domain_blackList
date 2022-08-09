@@ -13,6 +13,8 @@
 
 
 <?php
+// For execution time
+$start = microtime(true);
 
 $dnsbl_lookup = array(
     //"dbl.spamhaus.org",
@@ -139,21 +141,27 @@ $ip = (isset($_POST['ipCheck'])) ? $_POST['ipCheck'] : FALSE;
 ini_set('max_execution_time', 0);
 
 
-if ($ip) {
+if (filter_var($ip, FILTER_VALIDATE_IP) == true) 
+{
 
     $listed = "";
-                    
+                    // echo 'hello', ip2long($ip);die;
+                    // var_dump(filter_var($ip, FILTER_VALIDATE_IP));die;
                     foreach ($dnsbl_lookup as $hostname) {
                        
                         if(!ip2long($ip)){
                             $ip = gethostbyname($ip);
+                            // echo 'Check ip:  ', $ip;
                         
                         }
                         $host = implode(".", array_reverse(explode('.', $ip))) . '.' . $hostname . '.';
+                        // echo 'Host: ', $host , '<br>';
                         // $record = dns_get_record($host,DNS_TXT);
     
                         if (checkdnsrr($host, "A")) {
                             $listed .= $host . ' <font color="red">Listed IP = '.$ip.'</font><br /> ';
+                        }else{
+                            $listed .= $host . ' <font color="green">Not Listed IP = '.$ip.'</font><br /> ';
                         }
                     }
 
@@ -162,5 +170,10 @@ if ($ip) {
                     } else {
                         echo $listed;
                     }
-                }
+}else{
+    echo("$ip is not valid.<br><br>");
+}
+
+$time_end = microtime(true);
+echo 'Script running time is: ', $execution_time = ($time_end - $start)/60;
 ?>
